@@ -1,12 +1,17 @@
 package com.andoliver46.course.entities;
 
 import java.io.Serializable;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
 @Entity
@@ -22,7 +27,9 @@ public class User implements Serializable{
 	private String phone;
 	private String password;
 	
-	//Set<Order> orders = new HashSet<>();
+	@JsonIgnore
+	@OneToMany(mappedBy = "client")
+	Set<Order> orders = new HashSet<>();
 	
 	public User() {
 	}
@@ -74,6 +81,10 @@ public class User implements Serializable{
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public Set<Order> getOrders() {
+		return orders;
 	}
 
 	@Override
