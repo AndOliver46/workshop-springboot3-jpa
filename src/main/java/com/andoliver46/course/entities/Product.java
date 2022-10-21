@@ -14,7 +14,10 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.ManyToMany;
+<<<<<<< HEAD
 import jakarta.persistence.OneToMany;
+=======
+>>>>>>> 9be7e34127216a89a29a33c4c395260a6bf5cfc7
 import jakarta.persistence.Table;
 
 @Entity
