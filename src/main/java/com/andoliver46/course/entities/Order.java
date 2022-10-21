@@ -3,10 +3,7 @@ package com.andoliver46.course.entities;
 import java.io.Serializable;
 import java.time.Instant;
 import java.util.HashSet;
-<<<<<<< HEAD
 import java.util.List;
-=======
->>>>>>> 9be7e34127216a89a29a33c4c395260a6bf5cfc7
 import java.util.Objects;
 import java.util.Set;
 
@@ -39,11 +36,7 @@ public class Order implements Serializable {
 	@ManyToOne
 	@JoinColumn(name = "client_id")
 	private User client;
-<<<<<<< HEAD
-	
-=======
 
->>>>>>> 9be7e34127216a89a29a33c4c395260a6bf5cfc7
 	@OneToMany(mappedBy = "id.order")
 	private Set<OrderItem> items = new HashSet<>();
 	
@@ -89,12 +82,8 @@ public class Order implements Serializable {
 	public void setClient(User client) {
 		this.client = client;
 	}
-	
-<<<<<<< HEAD
-	public Set<OrderItem> getItems() {
-=======
+		
 	public Set<OrderItem> getItems(){
->>>>>>> 9be7e34127216a89a29a33c4c395260a6bf5cfc7
 		return items;
 	}
 
